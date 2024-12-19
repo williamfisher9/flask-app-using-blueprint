@@ -1,0 +1,6 @@
+{
+  "SQLALCHEMY_DATABASE_URI": "sqlite:///database.db",
+  "SECRET_KEY": "test87327473qwr12ewqfwqrwrqwewqewqe",
+  "JWT_SECRET_KEY": "terii129837214qwqwueoiqurquwr189273213wqe",
+  "DEBUG_MODE": true
+}
