@@ -1,2 +1,2 @@
-def get_home():
+def get_home_page():
     return 'home page'
