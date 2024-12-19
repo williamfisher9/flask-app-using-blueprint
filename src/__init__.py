@@ -1,7 +1,6 @@
 import json
 from flask import Flask, request, jsonify
 from config.logging_config import logging
-from flask_jwt_extended import
 
 from routes.app_routes import get_home_page
 
