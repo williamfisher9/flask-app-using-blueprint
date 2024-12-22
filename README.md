@@ -1,4 +1,4 @@
-# Movies library management application using Python and Angular
+# Structure Flask application using Blueprint
 - Install Python 3.13.1 which includes Python and PIP.
 - Check installed versions of python and pip using:
   ```
