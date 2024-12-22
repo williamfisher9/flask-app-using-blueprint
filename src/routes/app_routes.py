@@ -1,6 +1,10 @@
 import logging
-logger = logging.getLogger(__name__)
-def get_home_page():
+from flask import Blueprint
 
-    logger.info("test-------------------------------------")
-    return 'home page'
+logger = logging.getLogger(__name__)
+
+home_page_blueprint = Blueprint('home_page_blueprint', __name__)
+
+@home_page_blueprint.route('/')
+def index():
+    return "This is an example app"

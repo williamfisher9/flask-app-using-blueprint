@@ -3,9 +3,9 @@ from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, get_jwt_identity, create_access_token
 import logging
 
-from routes.app_routes import get_home_page
 from src.config.logging_config import initialize_logging_config
 
+from routes import app_routes
 
 
 if __name__ == '__main__':
@@ -20,6 +20,9 @@ if __name__ == '__main__':
 
     app.config.from_file("config\\app_configs.json", load=json.load)
 
-    app.add_url_rule('/api/v1/users', 'get_home_page', get_home_page)
+    #app.add_url_rule('/api/v1/users', 'get_home_page', get_home_page)
+
+    app.register_blueprint(app_routes.home_page_blueprint)
+
     app.run(debug=True, port=8080)
 
