@@ -23,6 +23,7 @@ if __name__ == '__main__':
     #app.add_url_rule('/api/v1/users', 'get_home_page', get_home_page)
 
     app.register_blueprint(app_routes.home_page_blueprint)
+    app.register_blueprint(app_routes.users_blueprint)
 
     app.run(debug=True, port=8080)
 

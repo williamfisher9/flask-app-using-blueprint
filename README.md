@@ -61,4 +61,21 @@
     py api.py
   ```
 
-  
+- When you create a Flask application, you start by creating a Flask object that represents your application, and then you associate views to routes. 
+- Flask takes care of dispatching incoming requests to the correct view based on the request URL and the routes you’ve defined.
+- In Flask, views can be any callable (like a function) that receives requests and returns the response for that request. Flask is responsible for sending the response back to the user.
+- The default project layout is great for very small applications, but it doesn’t scale well. As your code grows, it can become harder for you to maintain everything in a single file. So, when your application grows in size or complexity, you may want to structure your code in a different way to keep it maintainable and clear to understand.
+  - `Flask Blueprints` encapsulate functionality, such as views, templates, and other resources.
+    - Create a Blueprint object and give it a name.
+    - Add views to the blueprint using the route decorator.
+    - When you register a Flask Blueprint in an application, you’re actually extending the application with the contents of the Blueprint.
+    - The Blueprint object has methods and decorators that allow you to record operations to be executed when registering the Flask Blueprint in an application to extend it. One of the most used decorators is route. It allows you to associate a view function to a URL route. The following code block shows how this decorator is used:
+      ```
+      @example_blueprint.route('/')
+      def index():
+          return "This is an example app"
+      ```
+    - .errorhandler() to register an error handler function 
+    - .before_request() to execute an action before every request
+    - .after_request() to execute an action after every request
+    - .app_template_filter() to register a template filter at the application level
